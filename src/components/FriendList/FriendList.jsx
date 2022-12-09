@@ -1,9 +1,12 @@
 import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 import { FriendListItem } from '../FriendListItem/FriendListItem';
+import { Title } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
-    return (        
+    return (   
+        <>
+            <Title>Friend List</Title>
         <Box
             display="flex"
             alignItems="center"
@@ -22,7 +25,8 @@ export const FriendList = ({ friends }) => {
                     />
                    )
                )} 
-            </Box>        
+            </Box>  
+            </>
     )
 }
 

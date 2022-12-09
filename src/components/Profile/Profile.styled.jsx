@@ -25,7 +25,7 @@ export const UserAvatar = styled.img `
     width: 150px;
     max-width: 100%;
 
-    margin-bottom: ${p=>p.theme.space[4]}px;
+    margin-bottom: ${p=>p.theme.space[5]}px;
 
     border: ${p=>p.theme.borders.bold};
     border-radius: ${p=>p.theme.radii.round};
@@ -58,6 +58,18 @@ export const UserInfo = styled.p `
     
     width: 250px;
 ` */
+
+export const Title = styled.h2 `
+    font-family: ${p=>p.theme.fonts.body};
+    font-size: ${p => p.theme.fontSizes.l};
+    text-transform: uppercase;
+
+    margin-bottom: ${p => p.theme.space[4]}px;
+     
+    text-align: center;
+
+    color: ${p=>p.theme.colors.black}
+`
 
 export const StatsItem = styled.li`
     display: flex;

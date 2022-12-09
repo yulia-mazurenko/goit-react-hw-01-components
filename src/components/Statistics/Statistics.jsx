@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/Box';
-import { Title, TextItem } from './Statistics.styled';
+import { Title, TextItem, BlockTitle } from './Statistics.styled';
 import { getRandomtColor } from 'utils/getRandomColor';
 
 export const Statistics = ({ title, stats }) => {
     return (
+    <>
+        <BlockTitle>Statistics</BlockTitle>
         <Box
             display="flex"
             alignItems="center"
@@ -45,7 +47,8 @@ export const Statistics = ({ title, stats }) => {
                     
                 ))}
             </Box>
-        </Box>
+            </Box>
+            </>
 )
 }
 

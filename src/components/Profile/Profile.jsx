@@ -3,6 +3,7 @@ import { GiShadowFollower } from 'react-icons/gi';
 import { AiFillLike } from 'react-icons/ai';
 import { AiFillEye } from 'react-icons/ai';
 import { Box } from 'components/Box';
+import { Title } from './Profile.styled';
 
 import {
     UserName,
@@ -18,7 +19,9 @@ export const Profile = ({
     avatar,
     stats }) => {
     
-    return (
+  return (
+    <>
+      <Title>Profile</Title>
       <Box
           display="flex"
           flexDirection="column"
@@ -31,7 +34,7 @@ export const Profile = ({
           mb={7}
           bg="background"
           as="div"
-        >
+      >
           <Box
               display="flex"
             flexDirection="column"
@@ -68,6 +71,7 @@ export const Profile = ({
               </StatsItem>
           </Box>
       </Box>
+      </>
     )   
 }
      
