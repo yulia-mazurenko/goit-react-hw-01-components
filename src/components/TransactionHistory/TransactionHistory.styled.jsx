@@ -39,27 +39,9 @@ export const TableRow = styled.tr`
   border: ${p => p.theme.borders.normal};
   border-color: ${p => p.theme.colors.borderColor};
 
-  /* background-color: ${p =>
-    p.children[0].props.children === 'invoice' && p.theme.colors.invoice};
-  background-color: ${p =>
-    p.children[0].props.children === 'payment' && p.theme.colors.payment};
-  background-color: ${p =>
-    p.children[0].props.children === 'withdrawal' && p.theme.colors.withdrawal};
-  background-color: ${p =>
-    p.children[0].props.children === 'deposit' && p.theme.colors.deposit}; */
-
   background-color: ${p => {
-    if (p.children[0].props.children === 'invoice') {
-      return p.theme.colors.invoice;
-    }
-    if (p.children[0].props.children === 'payment') {
-      return p.theme.colors.payment;
-    }
-    if (p.children[0].props.children === 'withdrawal') {
-      return p.theme.colors.withdrawal;
-    } else {
-      return p.theme.colors.deposit;
-    }
+    const colorOfTableRow = p.children[0].props.children;
+    return p.theme.colors[colorOfTableRow];
   }};
 
   /* &:nth-child(2n) {
